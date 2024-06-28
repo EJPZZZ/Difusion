@@ -1,6 +1,6 @@
-const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
-const QRPortalWeb = require('@bot-whatsapp/portal')
-const BaileysProvider = require('@bot-whatsapp/provider/baileys')
+const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot');
+const QRPortalWeb = require('@bot-whatsapp/portal');
+const BaileysProvider = require('@bot-whatsapp/provider/baileys');
 const MockAdapter = require('@bot-whatsapp/database/mock');
 const { delay } = require('@whiskeysockets/baileys');
 
@@ -19,143 +19,60 @@ function getSaludo() {
 // Flujos para cada carrera
 const respuestasCarreras = {
     // Mensaje de informática
-    'informatica': {
+    '13': {
         mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Informática te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/BGxBRRw/info.jpg'
-    },
-    'informática': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Informática te comparto la siguiente imagen 😎' ,
-        media: 'https://i.ibb.co/BGxBRRw/info.jpg'
-    },
-    'Informática': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Informática te comparto la siguiente imagen 😎' ,
-        media: 'https://i.ibb.co/BGxBRRw/info.jpg'
-    },
-    'Informatica': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Informática te comparto la siguiente imagen 😎' ,
         media: 'https://i.ibb.co/BGxBRRw/info.jpg'
     },
 
     // Mensaje de agronomía
-    'agronomia': {
+    '8': {
         mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Agronomía te comparto la siguiente imagen 😎',
         media: 'https://i.ibb.co/3prSNNM/Agro.jpg'
     },
-    'agronomía': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Agronomía te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/3prSNNM/Agro.jpg'
-    },
-    'Agronomia': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Agronomía te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/3prSNNM/Agro.jpg'
-    },
-    'Agronomía': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Agronomía te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/3prSNNM/Agro.jpg'
-    },
+    
 
     // Mensaje de industrial
-    'industrial': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Industrial te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/CPdWcH0/Industrial.jpg'
-    },
-    'Industrial': {
+    '12': {
         mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Industrial te comparto la siguiente imagen 😎',
         media: 'https://i.ibb.co/CPdWcH0/Industrial.jpg'
     },
 
     // Mensaje de energías renovables
-    'energias renovables': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. en Energías Renovables te comparto la siguiente imagen 😎',
+    '11': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Energías Renovables te comparto la siguiente imagen 😎',
         media: 'https://i.ibb.co/mSB6Ntk/Erenovables.jpg'
     },
-    'energías renovables': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. en Energías Renovables te comparto la siguiente imagen ',
-        media: 'https://i.ibb.co/mSB6Ntk/Erenovables.jpg'
-    },
-
-    'Energias renovables': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. en Energías Renovables te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/mSB6Ntk/Erenovables.jpg'
-    },
-    'Energías renovables': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. en Energías Renovables te comparto la siguiente imagen ',
-        media: 'https://i.ibb.co/mSB6Ntk/Erenovables.jpg'
-    },
+    
 
     // Mensaje de bioquímica
-    'bioquimica': {
+    '9': {
         mensaje: 'Para conocer más detalles acerca de la carrera en Ing. Bioquímica te comparto la siguiente imagen 😎',
         media: 'https://i.ibb.co/ZXjN1b0/Bioq.jpg'
     },
-    'bioquímica': {
-        mensaje: 'Para conocer más detalles acerca de la carrera en Ing. Bioquímica te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/ZXjN1b0/Bioq.jpg'
-    },
-    'Bioquimica': {
-        mensaje: 'Para conocer más detalles acerca de la carrera en Ing. Bioquímica te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/ZXjN1b0/Bioq.jpg'
-    },
-    'Bioquímica': {
-        mensaje: 'Para conocer más detalles acerca de la carrera en Ing. Bioquímica te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/ZXjN1b0/Bioq.jpg'
-    },
+   
 
     // Mensaje de electromecánica
-    'electromecanica': {
+    '10': {
         mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Electromecánica te comparto la siguiente imagen 😎',
         media: 'https://i.ibb.co/GMp0WgY/Electro.jpg'
     },
-    'electromecánica': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Electromecánica te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/GMp0WgY/Electro.jpg'
-    },
-    'Electromecanica': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Electromecánica te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/GMp0WgY/Electro.jpg'
-    },
-    'Electromecánica': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Electromecánica te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/GMp0WgY/Electro.jpg'
-    },
-
+    
     // Mensaje de administración
-    'administracion': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Administración de Empresas te comparto la siguiente imagen 😎',
+    '7': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Administración te comparto la siguiente imagen 😎',
         media: 'https://i.ibb.co/S0jRht0/Admin.jpg'
     },
-    'administración': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Administración de Empresas te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/S0jRht0/Admin.jpg'
-    },
-    'Administracion': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Administración de Empresas te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/S0jRht0/Admin.jpg'
-    },
-    'Administración': {
-        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Administración de Empresas te comparto la siguiente imagen 😎',
-        media: 'https://i.ibb.co/S0jRht0/Admin.jpg'
-    }
     
 };
 
-// Flujos para talleres
-// const respuestasTalleres = {
-//     'ajedrez': 'Mensaje personalizado para el taller de ajedrez.',
-//     'basquet': 'Mensaje personalizado para el taller de basquet.',
-//     'futbol': 'Mensaje personalizado para el taller de futbol.',
-//     'fútbol': 'Mensaje personalizado para el taller de futbol.',
-//     'taekwondo': 'Mensaje personalizado para el taller de taekwondo.'
-// };
-
 // Flujo para preguntar sobre la carrera deseada
-const flowInformacionCarreras = addKeyword(['1', 'Informacion', 'Información'])
-    .addAnswer('Contamos con 7 carreras:\n*- Administración* \n*- Agronomía* \n*- Bioquímica*\n*- Electromecánica*\n*- Energías renovables*\n*- Industrial* \n*- Informática* \n¿De qué carrera te gustaría información?', {
-        delay: 5000 // Añadido retraso en la respuesta
+const flowInformacionCarreras = addKeyword('1')
+    .addAnswer('Contamos con 7 carreras:\n*7- Administración* \n*8- Agronomía* \n*9- Bioquímica*\n*10- Electromecánica*\n*11- Energías renovables*\n*12- Industrial* \n*13- Informática* \n¿De qué carrera te gustaría información?', {
+        delay: 3000 // Añadido retraso en la respuesta
     })
-    .addAnswer('Por favor, escribe el nombre de la carrera.', {
+    .addAnswer('Por favor, escribe el *numero* de la carrera.', {
         capture: true,
-        // delay: 5000 // Añadido retraso en la respuesta
+        delay: 3000 // Añadido retraso en la respuesta
     }, async (ctx, { provider }) => {
         const respuesta = ctx.body.toLowerCase().trim();
         const respuestaCarrera = respuestasCarreras[respuesta];
@@ -170,64 +87,60 @@ const flowInformacionCarreras = addKeyword(['1', 'Informacion', 'Información'])
         }
     });
 
-
 // Flujo para informacion de la institucion
-const flowInstitucion = addKeyword(['2', 'Institución', 'Institucion'])
+const flowInstitucion = addKeyword('2')
     .addAnswer('INFORMACION DEL ITSS', {
         delay: 5000
     });
 
 // Flujo de ubicación
-const flowUbicacion = addKeyword(['4', 'Ubicacion', 'Ubicación'])
-    .addAnswer('https://maps.app.goo.gl/uz1Rfp3XVdDrJriB9 \n Nos encontramos ubicados en📍: \nCarret. Teapa-Tacotalpa Km 4.5 Ej. Fco Javier Mina 86801 Teapa, Tabasco, Mexico ',{
+const flowUbicacion = addKeyword('4')
+    .addAnswer('https://maps.app.goo.gl/uz1Rfp3XVdDrJriB9 \n Nos encontramos ubicados en📍: \nCarret. Teapa-Tacotalpa Km 4.5 Ej. Fco Javier Mina 86801 Teapa, Tabasco, Mexico ', {
         delay: 5000,
         media: "https://i.ibb.co/7KJGhQJ/Captura-de-pantalla-2024-06-26-135915.png",
     });
 
 // Flujo de inscripciones
-const flowInscripciones = addKeyword(['3', 'Inscripciones', 'inscripciones'])
-    .addAnswer('Para conocer mas informacion acerca ' +
-    'del proceso de inscripcion te comparto la siguiente imagen☝🏻',{
-        delay: 5000,    
+const flowInscripciones = addKeyword('3')
+    .addAnswer('Para conocer más información acerca del proceso de admisión te comparto la siguiente imagen☝🏻', {
+        delay: 5000,
         media: "https://i.postimg.cc/Jh1BfzrY/408993623-862056865853751-2546998439695152438-n.jpg"
     });
 
-
-const flowContacto = addKeyword(['5', 'Contacto', 'Contactanos', 'contactanos'])
-    .addAnswer('📱 Para contactarnos puedes visitarnos en nuestras redes sociales como: \n*@TecNMRegionS*',{
+const flowContacto = addKeyword('5')
+    .addAnswer('📱 Para contactarnos puedes visitarnos en nuestras redes sociales como: \n*@TecNMRegionS*', {
         delay: 5000,
         media: "https://i.ibb.co/SJyvfr6/imagentec.jpg",
     });
 
-
 // Flujo para informacion de la institucion
-const flowAsesor = addKeyword(['6', 'Asesor', 'asesor'])
-    .addAnswer('Para tener una atención personalizada por llamada porfavor comunicarse al: \n☎️ *932-324-0640 ext - 135*', {
-            delay: 5000
+const flowAsesor = addKeyword('6')
+    .addAnswer('Para tener una atención personalizada por llamada por favor comunicarse al: \n☎️ *932-324-0640 ext - 135*', {
+        delay: 5000
     });
 
 // Flujos adicionales
 // Flujo de bienvenida
-const flowBienvenida = addKeyword(['Hola', 'hola', '.', 'buenos dias', 'Buenos dias', 'buenas tardes', 'Buenas tardes', 'buenas noches', 'Buenas noches'])
-    .addAnswer(`${getSaludo()}. Hola, soy el chat-bot del ITSS 🤖 Bienvenido al menú principal. Por favor elige una opción:
+const flowBienvenida = addKeyword(['Hola', 'hola', 'buenos dias', 'Buenos dias', 'buenas tardes', 'Buenas tardes', 'buenas noches', 'Buenas noches'])
+    .addAnswer(`${getSaludo()}. Hola, soy el chat-bot del ITSS 🤖 Bienvenid@ al menú principal. Por favor elige una opción:
     \n*1.* Información sobre nuestras ingenierías
     \n*2.* Información sobre nuestra institución
     \n*3.* Proceso de admisión
     \n*4.* Ubicación
     \n*5.* Contacto
     \n*6.* Hablar con un asesor
-    \n*Escribe el número de la opción deseada.*`,{
+    \n*Escribe el número de la opción deseada.*`, {
         delay: 5000
     });
 
 const flowAdios = addKeyword(['Adios', 'adios', 'adiós', 'Adiós', 'Ok', 'ok', 'Gracias', 'gracias'])
-    .addAnswer('Hasta luego, que tengas un buen día. #TeamITSS 😎📚',{
+    .addAnswer('Hasta luego, que tengas un buen día. #TeamITSS 😎📚', {
         delay: 4000
     });
 
-//flujo de broma para groserias
+// Flujo de broma para groserías
 const flowInsulto = addKeyword(['Pene', 'pene', 'picho', 'Picho'])
-    .addAnswer('Comes 😋. Atte: #TeamITSS. JAJAJA',{
+    .addAnswer('Comes 😋. Atte: #TeamITSS. JAJAJA', {
     });
 
 const mainFlow = createFlow([
@@ -240,32 +153,34 @@ const mainFlow = createFlow([
     flowAdios,
     flowInsulto,
     flowBienvenida
-    
 ]);
+
 
 // Función principal para inicializar el bot
 const main = async () => {
-    const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowInformacionCarreras,
-    flowInstitucion,
-    flowContacto,
-    flowUbicacion,
-    flowInscripciones,
-    flowAsesor,
-    flowAdios,
-    flowInsulto,
-    flowBienvenida
-    ])
-    const adapterProvider = createProvider(BaileysProvider)
+    const adapterDB = new MockAdapter();
+    const adapterFlow = createFlow([
+        flowInformacionCarreras,
+        flowInstitucion,
+        flowContacto,
+        flowUbicacion,
+        flowInscripciones,
+        flowAsesor,
+        flowAdios,
+        flowInsulto,
+        flowBienvenida
+    ]);
+    const adapterProvider = createProvider(BaileysProvider);
 
     createBot({
         flow: adapterFlow,
         provider: adapterProvider,
         database: adapterDB,
-    })
+    });
 
-    QRPortalWeb()
+    QRPortalWeb();
 };
+
 
 // Ejecutar la función principal
 main();
