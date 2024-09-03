@@ -1,23 +1,26 @@
 module.exports = {
     env: {
         browser: true,
-        commonjs: true,
         es2021: true,
     },
-    overrides: [
-        {
-            env: {
-                node: true,
-            },
-            files: ['.eslintrc.{js,cjs}'],
-            parserOptions: {
-                sourceType: 'script',
-            },
-        },
+    extends: [
+        'eslint:recommended',
+        'plugin:node/recommended'
     ],
     parserOptions: {
         ecmaVersion: 'latest',
+        sourceType: 'module',
     },
-    plugins: ['bot-whatsapp'],
-    extends: ['plugin:bot-whatsapp/recommended'],
-}
+    settings: {
+        'import/resolver': {
+            node: {
+                paths: ['node_modules']
+            }
+        }
+    },
+    plugins: ['node'],
+    rules: {
+        'node/no-missing-import': 'off',
+        'node/no-missing-require': 'off',
+    },
+};

@@ -1,12 +1,12 @@
 [handleMsg]:  {
   key: {
-    remoteJid: '5219321299546@s.whatsapp.net',
+    remoteJid: '5219321156539@s.whatsapp.net',
     fromMe: false,
-    id: '6AEE52BF38A2955E14873043D7E8596E',
+    id: '445BD67905365BAD57A317B57BE2A228',
     participant: undefined
   },
-  messageTimestamp: 1719980820,
-  pushName: 'Helen',
+  messageTimestamp: 1724889107,
+  pushName: 'Eduardo Jiménez',
   broadcast: false,
   message: Message {
     conversation: 'Hola',
@@ -16,12 +16,30 @@
     }
   },
   body: 'Hola',
-  from: '5219321299546'
+  from: '5219321156539'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_43979eeb-0e47-4c50-ad3e-7f47ccb5ff9c',
-  keyword: 'key_d7efbcd8-7d3a-4d62-beab-4a1af0236560',
-  answer: 'Buenas noches. Hola, soy el chat-bot del ITSS 🤖 Bienvenido al menú principal. Por favor elige una opción:\n' +
+  ref: 'ans_dd93a5a4-f2a8-4b4d-aa34-a919cfbdf953',
+  keyword: 'key_a4d59fdd-f55a-4542-8d56-aa4914b34603',
+  answer: 'Este chat-bot es para preguntas frecuentes e información sobre nuestra institución. Si no encuentra la información que necesita en el siguiente menú o requiere de ayuda más específica, por favor comuníquese con un asesor marcando la opcion numero 6.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 3000,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '7a8e351171f8968b2e21c45da7f095a7'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_6ebf82d5-7abd-4dc6-a3cf-9ad7cd392420',
+  keyword: 'ans_dd93a5a4-f2a8-4b4d-aa34-a919cfbdf953',
+  answer: ' Hola, Buenas tardes. Soy el chat-bot del ITSS 🤖 Bienvenido al menú principal. Por favor elige una opción:\n' +
     '    \n' +
     '*1.* Información sobre nuestras ingenierías\n' +
     '    \n' +
@@ -41,79 +59,39 @@
     buttons: [],
     capture: false,
     child: null,
-    delay: 5000,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '1e9cbb30d96cd8663b7ab40b4a5d11ef'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5219321299546@s.whatsapp.net',
-    fromMe: false,
-    id: 'D6B57C30093A2D368011F5A44A83C8B5',
-    participant: undefined
-  },
-  messageTimestamp: 1719980836,
-  pushName: 'Helen',
-  broadcast: false,
-  message: Message {
-    stickerMessage: StickerMessage {
-      url: 'https://mmg.whatsapp.net/v/t62.15575-24/28938230_713769860838223_3912824107364518070_n.enc?ccb=11-4&oh=01_Q5AaIGuCWV1DjtfIMS8oNQ5N8hjGpgvYC2aHlj2YG_D3u3VZ&oe=66AC2B04&_nc_sid=5e03e0&mms3=true',
-      fileSha256: [Uint8Array],
-      fileEncSha256: [Uint8Array],
-      mediaKey: [Uint8Array],
-      mimetype: 'image/webp',
-      height: 64,
-      width: 64,
-      directPath: '/v/t62.15575-24/28938230_713769860838223_3912824107364518070_n.enc?ccb=11-4&oh=01_Q5AaIGuCWV1DjtfIMS8oNQ5N8hjGpgvYC2aHlj2YG_D3u3VZ&oe=66AC2B04&_nc_sid=5e03e0',
-      fileLength: [Long],
-      mediaKeyTimestamp: [Long],
-      isAnimated: false,
-      stickerSentTs: [Long],
-      isAvatar: false
-    },
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: '_event_media__146be8c7-b0db-49fb-9533-a8bda566e95d',
-  from: '5219321299546'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_207f2878-bca2-47c3-9ee8-394566d0dd66',
-  keyword: 'key_f6d673e3-2918-4036-ac53-b6bb1540d732',
-  answer: 'Contamos con 7 carreras:\n' +
-    '*- Administración* \n' +
-    '*- Agronomía* \n' +
-    '*- Bioquímica*\n' +
-    '*- Electromecánica*\n' +
-    '*- Energías renovables*\n' +
-    '*- Industrial* \n' +
-    '*- Informática* \n' +
-    '¿De qué carrera te gustaría información?',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 5000,
+    delay: 3000,
     idle: null,
     ref: null,
     nested: [],
     keyword: {},
     callback: false
   },
-  refSerialize: '7d86bbec9e2035f1c37eb1550c297a8f'
+  refSerialize: 'f8c35bc9000abe4ebad539749bce02f3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5219321156539@s.whatsapp.net',
+    fromMe: false,
+    id: 'A6C15AFBE7A135B5360E7302C61C7A7D',
+    participant: undefined
+  },
+  messageTimestamp: 1724889118,
+  pushName: 'Eduardo Jiménez',
+  broadcast: false,
+  message: Message {
+    conversation: '7',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '7',
+  from: '5219321156539'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_a18bc1ea-05a3-419d-b185-50df8619f3f3',
-  keyword: 'ans_207f2878-bca2-47c3-9ee8-394566d0dd66',
-  answer: 'Por favor, escribe el nombre de la carrera.',
+  ref: 'ans_246f2fa6-4ac6-4001-a423-bd59dfdfb5e3',
+  keyword: 'key_b4262968-5ce9-4132-af2c-435e7c49ca57',
+  answer: 'Por favor, escribe tu pregunta.',
   options: {
     media: null,
     buttons: [],
@@ -126,168 +104,50 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '5672f885a91da5a93171e70cfd5796ff'
+  refSerialize: '2877c7bc66d05dfee745af2c65536b68'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '5219321299546@s.whatsapp.net',
+    remoteJid: '5219321156539@s.whatsapp.net',
     fromMe: false,
-    id: 'A871371340D8F3FEA13308DB8EC7F6BC',
+    id: '9F397FE1667D0C084123F0830DB4B65C',
     participant: undefined
   },
-  messageTimestamp: 1719980848,
-  pushName: 'Helen',
+  messageTimestamp: 1724889124,
+  pushName: 'Eduardo Jiménez',
   broadcast: false,
   message: Message {
-    conversation: 'Hola',
+    conversation: 'Para que sirve Node.js',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Hola',
-  from: '5219321299546'
+  body: 'Para que sirve Node.js',
+  from: '5219321156539'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_43979eeb-0e47-4c50-ad3e-7f47ccb5ff9c',
-  keyword: 'key_d7efbcd8-7d3a-4d62-beab-4a1af0236560',
-  answer: 'Buenas noches. Hola, soy el chat-bot del ITSS 🤖 Bienvenido al menú principal. Por favor elige una opción:\n' +
-    '    \n' +
-    '*1.* Información sobre nuestras ingenierías\n' +
-    '    \n' +
-    '*2.* Información sobre nuestra institución\n' +
-    '    \n' +
-    '*3.* Proceso de admisión\n' +
-    '    \n' +
-    '*4.* Ubicación\n' +
-    '    \n' +
-    '*5.* Contacto\n' +
-    '    \n' +
-    '*6.* Hablar con un asesor\n' +
-    '    \n' +
-    '*Escribe el número de la opción deseada.*',
+  ref: 'ans_dd93a5a4-f2a8-4b4d-aa34-a919cfbdf953',
+  keyword: 'key_a4d59fdd-f55a-4542-8d56-aa4914b34603',
+  answer: 'Este chat-bot es para preguntas frecuentes e información sobre nuestra institución. Si no encuentra la información que necesita en el siguiente menú o requiere de ayuda más específica, por favor comuníquese con un asesor marcando la opcion numero 6.',
   options: {
     media: null,
     buttons: [],
     capture: false,
     child: null,
-    delay: 5000,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '1e9cbb30d96cd8663b7ab40b4a5d11ef'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5219321299546@s.whatsapp.net',
-    fromMe: false,
-    id: '36E58FA959E8E3DF27CDEE9C672AE72E',
-    participant: undefined
-  },
-  messageTimestamp: 1719980871,
-  pushName: 'Helen',
-  broadcast: false,
-  message: Message {
-    conversation: '1',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: '1',
-  from: '5219321299546'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_207f2878-bca2-47c3-9ee8-394566d0dd66',
-  keyword: 'key_f6d673e3-2918-4036-ac53-b6bb1540d732',
-  answer: 'Contamos con 7 carreras:\n' +
-    '*- Administración* \n' +
-    '*- Agronomía* \n' +
-    '*- Bioquímica*\n' +
-    '*- Electromecánica*\n' +
-    '*- Energías renovables*\n' +
-    '*- Industrial* \n' +
-    '*- Informática* \n' +
-    '¿De qué carrera te gustaría información?',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 5000,
+    delay: 3000,
     idle: null,
     ref: null,
     nested: [],
     keyword: {},
     callback: false
   },
-  refSerialize: '7d86bbec9e2035f1c37eb1550c297a8f'
+  refSerialize: '7a8e351171f8968b2e21c45da7f095a7'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_a18bc1ea-05a3-419d-b185-50df8619f3f3',
-  keyword: 'ans_207f2878-bca2-47c3-9ee8-394566d0dd66',
-  answer: 'Por favor, escribe el nombre de la carrera.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '5672f885a91da5a93171e70cfd5796ff'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5219321299546@s.whatsapp.net',
-    fromMe: false,
-    id: 'F3F71D2188C0508173D5911E58189038',
-    participant: undefined
-  },
-  messageTimestamp: 1719980881,
-  pushName: 'Helen',
-  broadcast: false,
-  message: Message {
-    conversation: 'Administración',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Administración',
-  from: '5219321299546'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5219321299546@s.whatsapp.net',
-    fromMe: false,
-    id: '72CAADF7F9DB1C43F33EFD7366AAAA60',
-    participant: undefined
-  },
-  messageTimestamp: 1719980885,
-  pushName: 'Helen',
-  broadcast: false,
-  message: Message {
-    conversation: 'Hola',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Hola',
-  from: '5219321299546'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_43979eeb-0e47-4c50-ad3e-7f47ccb5ff9c',
-  keyword: 'key_d7efbcd8-7d3a-4d62-beab-4a1af0236560',
-  answer: 'Buenas noches. Hola, soy el chat-bot del ITSS 🤖 Bienvenido al menú principal. Por favor elige una opción:\n' +
+  ref: 'ans_6ebf82d5-7abd-4dc6-a3cf-9ad7cd392420',
+  keyword: 'ans_dd93a5a4-f2a8-4b4d-aa34-a919cfbdf953',
+  answer: ' Hola, Buenas tardes. Soy el chat-bot del ITSS 🤖 Bienvenido al menú principal. Por favor elige una opción:\n' +
     '    \n' +
     '*1.* Información sobre nuestras ingenierías\n' +
     '    \n' +
@@ -307,44 +167,12 @@
     buttons: [],
     capture: false,
     child: null,
-    delay: 5000,
+    delay: 3000,
     idle: null,
     ref: null,
     nested: [],
     keyword: {},
-    callback: true
+    callback: false
   },
-  refSerialize: '1e9cbb30d96cd8663b7ab40b4a5d11ef'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_43979eeb-0e47-4c50-ad3e-7f47ccb5ff9c',
-  keyword: 'key_d7efbcd8-7d3a-4d62-beab-4a1af0236560',
-  answer: 'Buenas noches. Hola, soy el chat-bot del ITSS 🤖 Bienvenido al menú principal. Por favor elige una opción:\n' +
-    '    \n' +
-    '*1.* Información sobre nuestras ingenierías\n' +
-    '    \n' +
-    '*2.* Información sobre nuestra institución\n' +
-    '    \n' +
-    '*3.* Proceso de admisión\n' +
-    '    \n' +
-    '*4.* Ubicación\n' +
-    '    \n' +
-    '*5.* Contacto\n' +
-    '    \n' +
-    '*6.* Hablar con un asesor\n' +
-    '    \n' +
-    '*Escribe el número de la opción deseada.*',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 5000,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '1e9cbb30d96cd8663b7ab40b4a5d11ef'
+  refSerialize: 'f8c35bc9000abe4ebad539749bce02f3'
 }
